@@ -13,6 +13,6 @@ class Router {
     static let mainStoryboard = UIStoryboard(name: "Main", bundle: Bundle.main)
     static let loginStoryboard = UIStoryboard(name: "Login", bundle: Bundle.main)
     
-    static let navSignUp = loginStoryboard.instantiateViewController(withIdentifier: "nav" + SignUpVC.identifier) as! UINavigationController
+    
     
 }

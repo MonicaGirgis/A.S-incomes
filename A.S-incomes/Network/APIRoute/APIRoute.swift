@@ -14,7 +14,7 @@ class APIRoute{
     private var sessionTask:URLSessionDataTask?
     private init(){}
     
-    private func initRequest(_ clientRequest:Baquala)->URLRequest? {
+    private func initRequest(_ clientRequest:ASIncomes)->URLRequest? {
         var request:URLRequest = clientRequest.request
         
         request.httpMethod = clientRequest.method.rawValue
@@ -31,14 +31,10 @@ class APIRoute{
         
         request.addHeaders(clientRequest.headers)
         
-        print("=======================================")
-        print(request)
-        print(request.headers)
-        print("=======================================")
         return request
     }
     
-    private func JSONTask<T:Decodable>(with request: URLRequest, decodingModel: T.Type,clientRequest: Baquala, completion: @escaping (Result<T, APIError>)-> Void) -> URLSessionDataTask {
+    private func JSONTask<T:Decodable>(with request: URLRequest, decodingModel: T.Type,clientRequest: ASIncomes, completion: @escaping (Result<T, APIError>)-> Void) -> URLSessionDataTask {
         
         let session = URLSession(configuration: .default)
         let task = session.dataTask(with: request) { (data, response, error) in
@@ -60,7 +56,6 @@ class APIRoute{
                         completion(.failure(.unauthenticated))
                         return
                     }
-                    if res.error_flag == 0 {
                         
                         var responseModel:T!
                         do {
@@ -79,22 +74,7 @@ class APIRoute{
                         }
                         completion(.success(responseModel))
                         
-                    } else{
-                        completion(.failure(.FlagFound(error: res.message ?? "Invalid Data")))
-                    }
                 }
-            case 401:
-//                switch clientRequest{
-//                case .login:
-//                    break
-//                default:
-//                    guard UserManager.shared.isUserLoggedIn() else { return}
-//                    NotificationCenter.default.post(name: Notification.Name("unauthenticated"), object: nil)
-//                }
-//                break
-                completion(.failure(.unauthenticated))
-            case 470:
-                NotificationCenter.default.post(name: Notification.Name("appVersion"), object: nil)
             case 400...504:
                 guard let data = data else {
                     completion(.failure(.invalidData))
@@ -125,7 +105,7 @@ class APIRoute{
         return task
     }
     
-    func fetchRequest<T: Decodable>(has loading: Bool = true, clientRequest: Baquala, decodingModel: T.Type, completion: @escaping (Result<T, APIError>) -> ()){
+    func fetchRequest<T: Decodable>(has loading: Bool = true, clientRequest: ASIncomes, decodingModel: T.Type, completion: @escaping (Result<T, APIError>) -> ()){
         
         if loading {
             self.timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(self.showspinner), userInfo: nil, repeats: false)

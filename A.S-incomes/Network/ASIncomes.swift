@@ -8,8 +8,10 @@
 import Foundation
 
 enum ASIncomes{
-    // MARK: - login
-    
+    case getAllAmounts
+    case getExpenseDetails(id: Int)
+    case insertNewAmount
+    case insertExpensesDetails
 }
 
 extension Bundle {
@@ -18,7 +20,7 @@ extension Bundle {
     }
     
     var urlSubFolder: String {
-        return object(forInfoDictionaryKey: "URLSubFolder-POS") as? String ?? ""
+        return object(forInfoDictionaryKey: "SubFolderURL") as? String ?? ""
     }
 }
 
@@ -32,19 +34,37 @@ extension ASIncomes: Endpoint{
     }
     
     var path: String {
-        
+        switch self {
+        case .getAllAmounts:
+            return "get_all_amount"
+        case .getExpenseDetails:
+            return "get_expense_details"
+        case .insertNewAmount:
+            return "insert_new_amount"
+        case .insertExpensesDetails:
+            return "insert_expenses_details"
+        }
     }
     
     var method: HTTPMethod {
-        
+        switch self {
+        case .insertNewAmount, .insertExpensesDetails:
+            return .post
+        default:
+            return .get
+        }
     }
     
     
     
     var queryItems: [URLQueryItem] {
         var queryItems: [URLQueryItem] = []
-        
-        return queryItems
+        switch self {
+        case .getExpenseDetails(let id):
+            return [URLQueryItem(name: "id", value: "\(id)")]
+        default:
+            return queryItems
+        }
     }
     
     var body: [String: Any]?{
@@ -55,7 +75,7 @@ extension ASIncomes: Endpoint{
     
     var headers : [httpHeader] {
         var headers: [httpHeader] = []
-        headers.append(httpHeader(key: "lang", value: (Language.getCurrentLanguage() == "ar") ? "ar" : "en"))
+//        headers.append(httpHeader(key: "lang", value: (Language.getCurrentLanguage() == "ar") ? "ar" : "en"))
         headers.append(httpHeader(key: "Accept", value: "application/json"))
         return headers
     }

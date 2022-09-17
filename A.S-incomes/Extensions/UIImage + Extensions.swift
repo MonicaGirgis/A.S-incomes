@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import Kingfisher
+//import Kingf isher
 
 extension UIImage {
     
@@ -34,13 +34,13 @@ extension UIImage {
 
 extension UIImageView {
     func getAsync(_ url: String){
-        if let imageURL = URL(string: url) {
+//        if let imageURL = URL(string: url) {
 //            self.contentMode = .scaleAspectFill
-            self.kf.indicatorType = .activity //.image(imageData: gifData)//.activity //.custom(indicator: MyIndicator())
-          self.kf.setImage(with: imageURL, placeholder: UIImage())
+//            self.kf.indicatorType = .activity //.image(imageData: gifData)//.activity //.custom(indicator: MyIndicator())
+//          self.kf.setImage(with: imageURL, placeholder: UIImage())
             //self.backgroundColor = #colorLiteral(red: 0.9490196078, green: 0.9490196078, blue: 0.968627451, alpha: 1)
-        }else{
-            self.image = UIImage(named: "default")
-        }
+//        }else{
+//            self.image = UIImage(named: "default")
+//        }
       }
 }

@@ -6,7 +6,8 @@
 //
 
 import Foundation
-import PhoneNumberKit
+import UIKit
+//import PhoneNumberKit
 
 extension Double{
     var price: String{
@@ -51,15 +52,15 @@ extension String {
         return regex.firstMatch(in: self, options: [], range: NSRange(location: 0, length: count)) != nil
     }
     
-    func isValidPhoneNumber() -> Bool {
-        do {
-            _ = try PhoneNumberKit().parse(self, withRegion: "SA", ignoreType: false)
-            return true
-        }
-        catch {
-            return false
-        }
-    }
+//    func isValidPhoneNumber() -> Bool {
+//        do {
+//            _ = try PhoneNumberKit().parse(self, withRegion: "SA", ignoreType: false)
+//            return true
+//        }
+//        catch {
+//            return false
+//        }
+//    }
     
     func dateFormat()-> String{
         let formatter = DateFormatter()

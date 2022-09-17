@@ -6,18 +6,17 @@
 //
 
 import Foundation
-import Alamofire
 
 struct httpHeader:Decodable {
     var key:String
     var value:String
 }
 
-//public enum HTTPMethod: String{
-//    case get = "GET"
-//    case post = "POST"
-//    case delete = "DELETE"
-//}
+public enum HTTPMethod: String{
+    case get = "GET"
+    case post = "POST"
+    case delete = "DELETE"
+}
 
 protocol Endpoint{
     var base: String { get }
@@ -40,11 +39,8 @@ extension Endpoint {
     
     var request: URLRequest {
         let url = urlComponents.url!
-        var request =  URLRequest(url: url)
-        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
-        request.setValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")
+        let request =  URLRequest(url: url)
         
         return request
     }
-    
 }

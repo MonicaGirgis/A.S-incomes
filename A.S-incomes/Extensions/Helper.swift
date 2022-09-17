@@ -105,9 +105,9 @@ class utilities {
     }
     
     class func getAsyncImages(url: String, imageView: UIImageView){
-          let imageURL = URL(string: url)
-          imageView.kf.indicatorType = .activity
-          imageView.kf.setImage(with: imageURL)
+//          let imageURL = URL(string: url)
+//          imageView.kf.indicatorType = .activity
+//          imageView.kf.setImage(with: imageURL)
       }
       
       static var toURL = { (url:String) -> URL in

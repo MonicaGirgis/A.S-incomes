@@ -6,14 +6,7 @@ private var bottomConstraint : NSLayoutConstraint?
 private var imageCompletion : ((UIImage?)->())?
 private var constraintValue : CGFloat = 0
 
-protocol GoToOrders {
-    func openOrders()
-}
-
 extension UIViewController {
-//    func checkLogin(){
-//        
-//    }
     
     static var identifier: String {
         return String(describing: self)
@@ -39,6 +32,7 @@ extension UIViewController {
         }
       }
     }
+    
     func presentAlertWithTitleAndMessage(title: String, message: String, options: [String], completion: @escaping (Int) -> Void) {
     let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
     for (index, option) in options.enumerated() {
