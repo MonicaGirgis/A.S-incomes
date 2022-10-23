@@ -19,18 +19,12 @@ class APIRoute{
         
         request.httpMethod = clientRequest.method.rawValue
         if clientRequest.body != nil{
-            switch clientRequest.method{
-            case .post:
-                let jsonData = clientRequest.body?.percentEncoded()
-                request.httpBody = jsonData
-            default:
-                let jsonData = try? JSONSerialization.data(withJSONObject: clientRequest.body as Any, options: .prettyPrinted)
-                request.httpBody = jsonData
-            }
+            let jsonData = try? JSONSerialization.data(withJSONObject: clientRequest.body as Any, options: .prettyPrinted)
+            request.httpBody = jsonData
         }
         
         request.addHeaders(clientRequest.headers)
-        
+       
         return request
     }
     

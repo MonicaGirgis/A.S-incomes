@@ -10,8 +10,9 @@ import Foundation
 enum ASIncomes{
     case getAllAmounts
     case getExpenseDetails(id: Int)
-    case insertNewAmount
+    case insertNewAmount(amount: Double, title: String, date: String, userId: Int? = nil)
     case insertExpensesDetails
+    case exportExcel(from: String, to: String)
 }
 
 extension Bundle {
@@ -43,6 +44,8 @@ extension ASIncomes: Endpoint{
             return "insert_new_amount"
         case .insertExpensesDetails:
             return "insert_expenses_details"
+        case .exportExcel:
+            return "export_excel"
         }
     }
     
@@ -58,24 +61,40 @@ extension ASIncomes: Endpoint{
     
     
     var queryItems: [URLQueryItem] {
-        var queryItems: [URLQueryItem] = []
         switch self {
         case .getExpenseDetails(let id):
             return [URLQueryItem(name: "id", value: "\(id)")]
+            
+        case .exportExcel(let from, let to):
+            return [URLQueryItem(name: "date_from", value: from), URLQueryItem(name: "date_to", value: to)]
+            
         default:
-            return queryItems
+            return []
         }
     }
     
     var body: [String: Any]?{
         var params: [String: Any] = [:]
-        
-       return nil
+        switch self {
+        case .insertNewAmount(let amount, let title, let date, let userId):
+            params["amount_v"] = amount
+            params["title_v"] = title
+            params["add_date"] = date
+            
+            if let userId = userId {
+                params["add_by"] = userId
+            }else {
+                params["add_by"] = 1
+            }
+            
+            return params
+        default:
+            return nil
+        }
     }
     
     var headers : [httpHeader] {
         var headers: [httpHeader] = []
-//        headers.append(httpHeader(key: "lang", value: (Language.getCurrentLanguage() == "ar") ? "ar" : "en"))
         headers.append(httpHeader(key: "Accept", value: "application/json"))
         return headers
     }

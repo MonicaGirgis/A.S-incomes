@@ -7,10 +7,10 @@
 
 import UIKit
 
-internal func createActivityIndicator(_ uiView : UIView)->UIView{
+internal func createActivityIndicator()->UIView{
     let container: UIView = UIView(frame: CGRect.zero)
-    container.layer.frame.size = uiView.frame.size
-    container.center = CGPoint(x: uiView.bounds.width/2, y: uiView.bounds.height/2)
+    container.layer.frame.size = windows!.frame.size
+    container.center = CGPoint(x: windows!.bounds.width/2, y: windows!.bounds.height/2)
     container.backgroundColor = UIColor(white: 0.2, alpha: 0.3)
     
     let loadingView: UIView = UIView()
@@ -34,7 +34,7 @@ internal func createActivityIndicator(_ uiView : UIView)->UIView{
     loadingView.addSubview(actInd)
     container.addSubview(loadingView)
     container.isHidden = true
-    uiView.addSubview(container)
+    windows?.addSubview(container)
     actInd.startAnimating()
     
     return container

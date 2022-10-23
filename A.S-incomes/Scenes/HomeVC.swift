@@ -14,10 +14,21 @@ class HomeVC: UIViewController {
     private var refreshControl  = UIRefreshControl()
     private var isFirstRefresh: Bool = true
     
+    private var amounts: [Amounts] = []
+    private lazy var loader: UIView = {
+       return createActivityIndicator()
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         setupUI()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        fetchData()
     }
     
 
@@ -48,18 +59,30 @@ class HomeVC: UIViewController {
     }
     
     private func fetchData() {
-        
+        loader.isHidden = false
+        APIRoute.shared.fetchRequest(clientRequest: .getAllAmounts, decodingModel: Response<Amounts>.self) { [weak self] result in
+            guard let strongSelf = self else { return}
+            strongSelf.loader.isHidden = true
+            switch result {
+            case .success(let data):
+                strongSelf.amounts = data.data
+                strongSelf.tableView.reloadData()
+            case .failure(let error):
+                windows?.make(toast: error.localizedDescription)
+            }
+        }
     }
 }
 
 // MARK: - UITableViewDataSource, UITableViewDelegate
 extension HomeVC: UITableViewDataSource, UITableViewDelegate  {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 13
+        return amounts.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: IncomeTableCell.identifier, for: indexPath) as! IncomeTableCell
+        cell.setData(amount: amounts[indexPath.row])
         return cell
     }
     
