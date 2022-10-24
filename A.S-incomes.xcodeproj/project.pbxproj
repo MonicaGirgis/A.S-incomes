@@ -7,10 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C58C86A829057F260093A391 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = C58C86AA29057F260093A391 /* Localizable.strings */; };
 		C5C43E2228FB474E00538AE6 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C43E2128FB474E00538AE6 /* CardView.swift */; };
 		C5DC0A512902C26400427AE8 /* ExportExcelVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5DC0A502902C26400427AE8 /* ExportExcelVC.swift */; };
 		C5DC0A532902C9B900427AE8 /* BaseTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5DC0A522902C9B900427AE8 /* BaseTabBar.swift */; };
-		C5DC0A552902CC3900427AE8 /* ExportXlsxService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5DC0A542902CC3900427AE8 /* ExportXlsxService.swift */; };
 		C5E717BF28D651C8005A21DE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E717BE28D651C8005A21DE /* AppDelegate.swift */; };
 		C5E717C128D651C8005A21DE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E717C028D651C8005A21DE /* SceneDelegate.swift */; };
 		C5E717C628D651C8005A21DE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5E717C428D651C8005A21DE /* Main.storyboard */; };
@@ -55,10 +55,12 @@
 /* Begin PBXFileReference section */
 		036C8C6EAC15CA2CD602F338 /* Pods-A.S-incomes.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-A.S-incomes.release.xcconfig"; path = "Target Support Files/Pods-A.S-incomes/Pods-A.S-incomes.release.xcconfig"; sourceTree = "<group>"; };
 		141491808CC2893CEFB3075C /* Pods-A.S-incomes.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-A.S-incomes.debug.xcconfig"; path = "Target Support Files/Pods-A.S-incomes/Pods-A.S-incomes.debug.xcconfig"; sourceTree = "<group>"; };
+		C58C86A329057E740093A391 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		C58C86A429057E740093A391 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Main.strings; sourceTree = "<group>"; };
+		C58C86A929057F260093A391 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Localizable.strings; sourceTree = "<group>"; };
 		C5C43E2128FB474E00538AE6 /* CardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		C5DC0A502902C26400427AE8 /* ExportExcelVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExportExcelVC.swift; sourceTree = "<group>"; };
 		C5DC0A522902C9B900427AE8 /* BaseTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTabBar.swift; sourceTree = "<group>"; };
-		C5DC0A542902CC3900427AE8 /* ExportXlsxService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExportXlsxService.swift; sourceTree = "<group>"; };
 		C5E717BB28D651C8005A21DE /* A.S-incomes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "A.S-incomes.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5E717BE28D651C8005A21DE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C5E717C028D651C8005A21DE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -131,6 +133,14 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		C58C86A529057ECE0093A391 /* Localization */ = {
+			isa = PBXGroup;
+			children = (
+				C58C86AA29057F260093A391 /* Localizable.strings */,
+			);
+			path = Localization;
+			sourceTree = "<group>";
+		};
 		C5C43E2028FB473400538AE6 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
@@ -163,6 +173,7 @@
 			children = (
 				C5E717E128D65E2B005A21DE /* Manager */,
 				C5E717D228D65B1C005A21DE /* App Delegates */,
+				C58C86A529057ECE0093A391 /* Localization */,
 				C5E717E428D65ED1005A21DE /* Helper */,
 				C5C43E2028FB473400538AE6 /* Shared */,
 				C5E717E728D65F36005A21DE /* Extensions */,
@@ -232,7 +243,6 @@
 		C5E717E428D65ED1005A21DE /* Helper */ = {
 			isa = PBXGroup;
 			children = (
-				C5DC0A542902CC3900427AE8 /* ExportXlsxService.swift */,
 				C5E717E528D65EF9005A21DE /* Base.swift */,
 			);
 			path = Helper;
@@ -331,6 +341,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ar,
 			);
 			mainGroup = C5E717B228D651C8005A21DE;
 			productRefGroup = C5E717BC28D651C8005A21DE /* Products */;
@@ -347,6 +358,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C58C86A829057F260093A391 /* Localizable.strings in Resources */,
 				C5E717CB28D651CA005A21DE /* LaunchScreen.storyboard in Resources */,
 				C5E717C828D651CA005A21DE /* Assets.xcassets in Resources */,
 				C5E717C628D651C8005A21DE /* Main.storyboard in Resources */,
@@ -439,7 +451,6 @@
 				C5DC0A532902C9B900427AE8 /* BaseTabBar.swift in Sources */,
 				C5E7181228D65F72005A21DE /* String+Extensions.swift in Sources */,
 				C5E7181128D65F72005A21DE /* Common.swift in Sources */,
-				C5DC0A552902CC3900427AE8 /* ExportXlsxService.swift in Sources */,
 				C5E7180F28D65F72005A21DE /* AppData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -447,10 +458,19 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		C58C86AA29057F260093A391 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C58C86A929057F260093A391 /* ar */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		C5E717C428D651C8005A21DE /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				C5E717C528D651C8005A21DE /* Base */,
+				C58C86A429057E740093A391 /* ar */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -459,6 +479,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				C5E717CA28D651CA005A21DE /* Base */,
+				C58C86A329057E740093A391 /* ar */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -470,6 +491,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
@@ -531,6 +553,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
@@ -590,7 +613,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 399WVJS596;
+				DEVELOPMENT_TEAM = F5F2AZJVKK;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "A.S-incomes/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -621,7 +644,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 399WVJS596;
+				DEVELOPMENT_TEAM = F5F2AZJVKK;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "A.S-incomes/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

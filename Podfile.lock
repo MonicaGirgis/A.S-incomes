@@ -1,16 +1,24 @@
 PODS:
+  - DropDown (2.3.13)
+  - IQKeyboardManagerSwift (6.5.10)
   - libxlsxwriter (1.1.4)
 
 DEPENDENCIES:
+  - DropDown
+  - IQKeyboardManagerSwift
   - libxlsxwriter
 
 SPEC REPOS:
   trunk:
+    - DropDown
+    - IQKeyboardManagerSwift
     - libxlsxwriter
 
 SPEC CHECKSUMS:
+  DropDown: 8a2116376c1981888557f72ec2ffc9a5e0e456ec
+  IQKeyboardManagerSwift: 52962c76ab33532f15ad9f3ff4e5715eda5335bb
   libxlsxwriter: f9f040bb01f0aabac1adb09f27c8cf542ae9a044
 
-PODFILE CHECKSUM: 267825d716d9cd672100b53d2fdb86ae11e0cb5b
+PODFILE CHECKSUM: 35bdac985088132cf8370f3d8757cf7537b34df4
 
 COCOAPODS: 1.11.2

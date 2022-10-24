@@ -1,0 +1,42 @@
+
+/* Class = "UIButton"; configuration.title = "Export"; ObjectID = "2zi-wz-OEE"; */
+"2zi-wz-OEE.configuration.title" = "Export";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "2zi-wz-OEE"; */
+"2zi-wz-OEE.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Enter new received amount"; ObjectID = "3Uf-xE-ZVO"; */
+"3Uf-xE-ZVO.text" = "Enter new received amount";
+
+/* Class = "UILabel"; text = "Date"; ObjectID = "DLq-Ha-Y8Z"; */
+"DLq-Ha-Y8Z.text" = "Date";
+
+/* Class = "UITabBarItem"; title = "Export Excel"; ObjectID = "HGW-GQ-Rdd"; */
+"HGW-GQ-Rdd.title" = "Export Excel";
+
+/* Class = "UILabel"; text = "Amount"; ObjectID = "LjF-Em-XZZ"; */
+"LjF-Em-XZZ.text" = "Amount";
+
+/* Class = "UILabel"; text = "From"; ObjectID = "RSj-rn-VCM"; */
+"RSj-rn-VCM.text" = "From";
+
+/* Class = "UILabel"; text = "Export excel sheet"; ObjectID = "ca9-xW-FkM"; */
+"ca9-xW-FkM.text" = "Export excel sheet";
+
+/* Class = "UILabel"; text = "Description"; ObjectID = "mdH-ay-QES"; */
+"mdH-ay-QES.text" = "Description";
+
+/* Class = "UITabBarItem"; title = "Insert Expense"; ObjectID = "pVR-Oa-PH9"; */
+"pVR-Oa-PH9.title" = "Insert Expense";
+
+/* Class = "UILabel"; text = "To"; ObjectID = "pm9-gM-o61"; */
+"pm9-gM-o61.text" = "To";
+
+/* Class = "UITabBarItem"; title = "Home"; ObjectID = "r5U-tx-w4j"; */
+"r5U-tx-w4j.title" = "Home";
+
+/* Class = "UIButton"; configuration.title = "Send"; ObjectID = "rnG-K5-a2z"; */
+"rnG-K5-a2z.configuration.title" = "Send";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "rnG-K5-a2z"; */
+"rnG-K5-a2z.normalTitle" = "Button";

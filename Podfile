@@ -8,5 +8,7 @@ target 'A.S-incomes' do
   # Pods for A.S-incomes
 
 pod 'libxlsxwriter'
+pod 'IQKeyboardManagerSwift'
+pod 'DropDown'
 
 end

@@ -57,9 +57,15 @@ class EnterExpensesVC: UIViewController {
             windows?.make(toast: "Insert values in all fields".localized)
             return
         }
+        
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd"
-        let date = dateFormatter.string(from: datePicker.date)
+        var date = dateFormatter.string(from: datePicker.date)
+        
+        if date.isEmpty {
+            date = dateFormatter.string(from: Date())
+        }
+        
         sendNewAmount(amount: amount, desc: desc, date: date)
     }
 }
