@@ -24,6 +24,7 @@ class ExportExcelVC: UIViewController {
     private let dateFormatter = DateFormatter()
     
     private var data: [Bond] = []
+    private var destinations: [Destination] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,13 +39,26 @@ class ExportExcelVC: UIViewController {
     
     private func fetchData(from: String, to: String) {
         loader.isHidden = false
+        APIRoute.shared.fetchRequest(clientRequest: .exportExcel2(from: from, to: to), decodingModel: Response<Destination>.self) { [weak self] result in
+            guard let strongSelf = self else { return}
+            switch result {
+            case .success(let data):
+                strongSelf.destinations = data.data
+            case .failure(let error):
+                windows?.make(toast: error.localizedDescription)
+            }
+            strongSelf.fetchData2(from: from, to: to)
+        }
+    }
+    
+    private func fetchData2(from: String, to: String) {
         APIRoute.shared.fetchRequest(clientRequest: .exportExcel(from: from, to: to), decodingModel: Response<Bond>.self) { [weak self] result in
             guard let strongSelf = self else { return}
             strongSelf.loader.isHidden = true
             switch result {
             case .success(let data):
-                if !data.data.isEmpty {
-                    strongSelf.data = data.data
+                strongSelf.data = data.data
+                if !data.data.isEmpty, !strongSelf.destinations.isEmpty {
                     strongSelf.generateExcelFile(inQuickLook: false)
                 }
             case .failure(let error):
@@ -76,6 +90,7 @@ class ExportExcelVC: UIViewController {
         format_set_border(myformat1, 1)
         format_set_bold(headerFormat)
         format_set_border(headerFormat, 1)
+        format_set_border(myformat2, 2)
         format_set_num_format(myformat2, "$#,##0.00")
         
         // text aligment
@@ -120,8 +135,20 @@ class ExportExcelVC: UIViewController {
             }
         }
         
+        ///////////////////////////////////////////////////////////////////////////////////////////////////////
+        /// //////////////////////////////////////////////////////////
+        ///
+        var writingLine2: UInt16 = 0
         
-        worksheet_write_string(worksheet2, 0, 0, "Some text", myformat1)
+        worksheet_write_string(worksheet2, 0, writingLine2, "الجهة", headerFormat)
+        worksheet_write_string(worksheet2, 1, writingLine2, "المصروف", headerFormat)
+        
+        destinations.forEach { dest in
+            writingLine2 += 1
+            worksheet_write_string(worksheet2, 0, writingLine2, dest.name ?? "", myformat2)
+            worksheet_write_string(worksheet2, 1, writingLine2,  dest.amount ?? "", myformat2)
+        }
+        
         //Close the workbook, save the file and free any memory.
         let error = workbook_close(workbook)
         //Check if there was any error creating the xlsx file.

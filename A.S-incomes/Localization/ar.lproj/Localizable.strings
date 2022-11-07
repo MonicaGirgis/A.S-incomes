@@ -5,3 +5,15 @@
   Created by Monica Girgis Kamel on 23/10/2022.
   
 */
+
+"Remaining" = "المتبقي";
+"Total" = "المبلغ الكلي";
+"Insert values in all fields" = "أدخل القيم في جميع الحقول";
+"Amount" = "المبلغ";
+"Destination" = "الجهة";
+"Date" = "التاريخ";
+"Description" = "ملاحظات إضافية";
+"Send" = "إرسال";
+"Username" = "اسم المستخدم";
+"Password" = "كلمة السر";
+"Login" = "تسجيل الدخول";

@@ -25,10 +25,22 @@ class HomeVC: UIViewController {
         setupUI()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        navigationController?.navigationBar.isHidden = true
+    }
+    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
         fetchData()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        navigationController?.navigationBar.isHidden = false
     }
     
 
@@ -72,6 +84,11 @@ class HomeVC: UIViewController {
             }
         }
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let vc = segue.destination as? EnterNewAmountVC, let amount = sender as? Amounts else { return}
+        vc.amount = amount
+    }
 }
 
 // MARK: - UITableViewDataSource, UITableViewDelegate
@@ -87,6 +104,6 @@ extension HomeVC: UITableViewDataSource, UITableViewDelegate  {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+        performSegue(withIdentifier: "show" + EnterNewAmountVC.identifier , sender: amounts[indexPath.row])
     }
 }

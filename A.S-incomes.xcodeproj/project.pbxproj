@@ -7,7 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C527365A290AB9D600EE8BFC /* EnterNewAmountVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5273659290AB9D600EE8BFC /* EnterNewAmountVC.swift */; };
 		C58C86A829057F260093A391 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = C58C86AA29057F260093A391 /* Localizable.strings */; };
+		C59B91D22917B887008805FF /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59B91D12917B887008805FF /* LoginVC.swift */; };
 		C5C43E2228FB474E00538AE6 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C43E2128FB474E00538AE6 /* CardView.swift */; };
 		C5DC0A512902C26400427AE8 /* ExportExcelVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5DC0A502902C26400427AE8 /* ExportExcelVC.swift */; };
 		C5DC0A532902C9B900427AE8 /* BaseTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5DC0A522902C9B900427AE8 /* BaseTabBar.swift */; };
@@ -55,9 +57,11 @@
 /* Begin PBXFileReference section */
 		036C8C6EAC15CA2CD602F338 /* Pods-A.S-incomes.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-A.S-incomes.release.xcconfig"; path = "Target Support Files/Pods-A.S-incomes/Pods-A.S-incomes.release.xcconfig"; sourceTree = "<group>"; };
 		141491808CC2893CEFB3075C /* Pods-A.S-incomes.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-A.S-incomes.debug.xcconfig"; path = "Target Support Files/Pods-A.S-incomes/Pods-A.S-incomes.debug.xcconfig"; sourceTree = "<group>"; };
+		C5273659290AB9D600EE8BFC /* EnterNewAmountVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterNewAmountVC.swift; sourceTree = "<group>"; };
 		C58C86A329057E740093A391 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		C58C86A429057E740093A391 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Main.strings; sourceTree = "<group>"; };
 		C58C86A929057F260093A391 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Localizable.strings; sourceTree = "<group>"; };
+		C59B91D12917B887008805FF /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		C5C43E2128FB474E00538AE6 /* CardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		C5DC0A502902C26400427AE8 /* ExportExcelVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExportExcelVC.swift; sourceTree = "<group>"; };
 		C5DC0A522902C9B900427AE8 /* BaseTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTabBar.swift; sourceTree = "<group>"; };
@@ -284,6 +288,8 @@
 				C5E7181528D66082005A21DE /* HomeVC.swift */,
 				C5E7181728D66262005A21DE /* EnterExpensesVC.swift */,
 				C5DC0A502902C26400427AE8 /* ExportExcelVC.swift */,
+				C5273659290AB9D600EE8BFC /* EnterNewAmountVC.swift */,
+				C59B91D12917B887008805FF /* LoginVC.swift */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -336,10 +342,10 @@
 			};
 			buildConfigurationList = C5E717B628D651C8005A21DE /* Build configuration list for PBXProject "A.S-incomes" */;
 			compatibilityVersion = "Xcode 13.0";
-			developmentRegion = en;
+			developmentRegion = ar;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				en,
+				ar,
 				Base,
 				ar,
 			);
@@ -427,6 +433,7 @@
 				C5E7180828D65F72005A21DE /* UILabel + Extensions.swift in Sources */,
 				C5E7181628D66082005A21DE /* HomeVC.swift in Sources */,
 				C5E7180D28D65F72005A21DE /* ViewController.swift in Sources */,
+				C527365A290AB9D600EE8BFC /* EnterNewAmountVC.swift in Sources */,
 				C5E7180128D65F72005A21DE /* URL + Extenstions.swift in Sources */,
 				C5E7180728D65F72005A21DE /* Helper.swift in Sources */,
 				C5C43E2228FB474E00538AE6 /* CardView.swift in Sources */,
@@ -449,6 +456,7 @@
 				C5E717DD28D65C7A005A21DE /* APIRoute.swift in Sources */,
 				C5E717DF28D65C7A005A21DE /* ASIncomes.swift in Sources */,
 				C5DC0A532902C9B900427AE8 /* BaseTabBar.swift in Sources */,
+				C59B91D22917B887008805FF /* LoginVC.swift in Sources */,
 				C5E7181228D65F72005A21DE /* String+Extensions.swift in Sources */,
 				C5E7181128D65F72005A21DE /* Common.swift in Sources */,
 				C5E7180F28D65F72005A21DE /* AppData.swift in Sources */,

@@ -10,7 +10,7 @@ import UIKit
 
 class TabBarController: UITabBarController , UITabBarControllerDelegate {
     
-    let tabBarItemsNames = ["Home","Insert Expense","Export Excel"]
+    let tabBarItemsNames = ["Home".localized,"Insert Expense".localized,"Export Excel".localized]
     let tabBarItemsImages = [UIImage(systemName: "homekit") ?? UIImage(),
                              UIImage(systemName: "pencil.and.ellipsis.rectangle") ?? UIImage(),
                              UIImage(systemName: "tray.full") ?? UIImage()]

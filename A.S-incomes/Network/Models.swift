@@ -58,3 +58,13 @@ struct Bond: Decodable {
         case date = "date"
     }
 }
+
+struct Destination: Decodable {
+    let name: String?
+    let amount: String?
+}
+
+struct User: Codable {
+    let id: String?
+    let type: String?
+}

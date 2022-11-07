@@ -1,42 +1,42 @@
 
 /* Class = "UIButton"; configuration.title = "Export"; ObjectID = "2zi-wz-OEE"; */
-"2zi-wz-OEE.configuration.title" = "Export";
+"2zi-wz-OEE.configuration.title" = "إصدار ملف الإكسل";
 
 /* Class = "UIButton"; normalTitle = "Button"; ObjectID = "2zi-wz-OEE"; */
 "2zi-wz-OEE.normalTitle" = "Button";
 
 /* Class = "UILabel"; text = "Enter new received amount"; ObjectID = "3Uf-xE-ZVO"; */
-"3Uf-xE-ZVO.text" = "Enter new received amount";
+"3Uf-xE-ZVO.text" = "أدخل المبلغ الوارد";
 
 /* Class = "UILabel"; text = "Date"; ObjectID = "DLq-Ha-Y8Z"; */
-"DLq-Ha-Y8Z.text" = "Date";
+"DLq-Ha-Y8Z.text" = "التاريخ";
 
 /* Class = "UITabBarItem"; title = "Export Excel"; ObjectID = "HGW-GQ-Rdd"; */
-"HGW-GQ-Rdd.title" = "Export Excel";
+"HGW-GQ-Rdd.title" = "إصدار ملف الإكسل";
 
 /* Class = "UILabel"; text = "Amount"; ObjectID = "LjF-Em-XZZ"; */
-"LjF-Em-XZZ.text" = "Amount";
+"LjF-Em-XZZ.text" = "المبلغ";
 
 /* Class = "UILabel"; text = "From"; ObjectID = "RSj-rn-VCM"; */
-"RSj-rn-VCM.text" = "From";
+"RSj-rn-VCM.text" = "من";
 
 /* Class = "UILabel"; text = "Export excel sheet"; ObjectID = "ca9-xW-FkM"; */
-"ca9-xW-FkM.text" = "Export excel sheet";
+"ca9-xW-FkM.text" = "إصدار ملف الإكسل";
 
 /* Class = "UILabel"; text = "Description"; ObjectID = "mdH-ay-QES"; */
-"mdH-ay-QES.text" = "Description";
+"mdH-ay-QES.text" = "ملاحظات إضافية";
 
 /* Class = "UITabBarItem"; title = "Insert Expense"; ObjectID = "pVR-Oa-PH9"; */
-"pVR-Oa-PH9.title" = "Insert Expense";
+"pVR-Oa-PH9.title" = "أدخال مصروف";
 
 /* Class = "UILabel"; text = "To"; ObjectID = "pm9-gM-o61"; */
-"pm9-gM-o61.text" = "To";
+"pm9-gM-o61.text" = "إلي";
 
 /* Class = "UITabBarItem"; title = "Home"; ObjectID = "r5U-tx-w4j"; */
-"r5U-tx-w4j.title" = "Home";
+"r5U-tx-w4j.title" = "الرئيسية";
 
 /* Class = "UIButton"; configuration.title = "Send"; ObjectID = "rnG-K5-a2z"; */
-"rnG-K5-a2z.configuration.title" = "Send";
+"rnG-K5-a2z.configuration.title" = "إرسال";
 
 /* Class = "UIButton"; normalTitle = "Button"; ObjectID = "rnG-K5-a2z"; */
 "rnG-K5-a2z.normalTitle" = "Button";

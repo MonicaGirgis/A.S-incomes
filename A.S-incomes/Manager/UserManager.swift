@@ -15,7 +15,18 @@ class UserManager{
     
     // check if user is logged in
     func isUserLoggedIn()-> Bool{
-        return getAuthorizationKey() != nil 
+        return (getUserData().id ?? "") != ""
+    }
+    
+    func setUser(user: User) {
+        UserDefaults.standard.set(user.id ?? "", forKey: "userId")
+        UserDefaults.standard.set(user.type ?? "", forKey: "userType")
+    }
+    
+    func getUserData() -> User {
+        let id = UserDefaults.standard.string(forKey: "userId") ?? ""
+        let type = UserDefaults.standard.string(forKey: "userType") ?? ""
+        return User(id: id, type: type)
     }
     
     // MARK: - Auth key
