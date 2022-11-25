@@ -7,7 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C527365A290AB9D600EE8BFC /* EnterNewAmountVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5273659290AB9D600EE8BFC /* EnterNewAmountVC.swift */; };
+		C527365A290AB9D600EE8BFC /* EnterExpensesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5273659290AB9D600EE8BFC /* EnterExpensesVC.swift */; };
+		C549F39729229C2000354B2D /* A.S-incomes.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C549F39529229C2000354B2D /* A.S-incomes.xcdatamodeld */; };
+		C549F39929229D9100354B2D /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C549F39829229D9100354B2D /* CoreDataManager.swift */; };
+		C549F39B2922B15000354B2D /* ImportsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C549F39A2922B15000354B2D /* ImportsVC.swift */; };
 		C58C86A829057F260093A391 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = C58C86AA29057F260093A391 /* Localizable.strings */; };
 		C59B91D22917B887008805FF /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59B91D12917B887008805FF /* LoginVC.swift */; };
 		C5C43E2228FB474E00538AE6 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C43E2128FB474E00538AE6 /* CardView.swift */; };
@@ -48,7 +51,7 @@
 		C5E7181228D65F72005A21DE /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E717FC28D65F72005A21DE /* String+Extensions.swift */; };
 		C5E7181328D65F72005A21DE /* UICollectionViewCell + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E717FD28D65F72005A21DE /* UICollectionViewCell + Extensions.swift */; };
 		C5E7181628D66082005A21DE /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E7181528D66082005A21DE /* HomeVC.swift */; };
-		C5E7181828D66262005A21DE /* EnterExpensesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E7181728D66262005A21DE /* EnterExpensesVC.swift */; };
+		C5E7181828D66262005A21DE /* EnterImportsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E7181728D66262005A21DE /* EnterImportsVC.swift */; };
 		C5E7181F28D663B3005A21DE /* IncomeTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E7181D28D663B3005A21DE /* IncomeTableCell.swift */; };
 		C5E7182028D663B3005A21DE /* IncomeTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C5E7181E28D663B3005A21DE /* IncomeTableCell.xib */; };
 		EAACD739526628DBAB487763 /* Pods_A_S_incomes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD09125A85405BD5F6A7B742 /* Pods_A_S_incomes.framework */; };
@@ -57,9 +60,12 @@
 /* Begin PBXFileReference section */
 		036C8C6EAC15CA2CD602F338 /* Pods-A.S-incomes.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-A.S-incomes.release.xcconfig"; path = "Target Support Files/Pods-A.S-incomes/Pods-A.S-incomes.release.xcconfig"; sourceTree = "<group>"; };
 		141491808CC2893CEFB3075C /* Pods-A.S-incomes.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-A.S-incomes.debug.xcconfig"; path = "Target Support Files/Pods-A.S-incomes/Pods-A.S-incomes.debug.xcconfig"; sourceTree = "<group>"; };
-		C5273659290AB9D600EE8BFC /* EnterNewAmountVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterNewAmountVC.swift; sourceTree = "<group>"; };
+		C5273659290AB9D600EE8BFC /* EnterExpensesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterExpensesVC.swift; sourceTree = "<group>"; };
+		C549F39629229C2000354B2D /* A.S-incomes.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "A.S-incomes.xcdatamodel"; sourceTree = "<group>"; };
+		C549F39829229D9100354B2D /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		C549F39A2922B15000354B2D /* ImportsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImportsVC.swift; sourceTree = "<group>"; };
+		C54DB06C2926DF7500C75CA7 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Main.strings; sourceTree = "<group>"; };
 		C58C86A329057E740093A391 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
-		C58C86A429057E740093A391 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Main.strings; sourceTree = "<group>"; };
 		C58C86A929057F260093A391 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Localizable.strings; sourceTree = "<group>"; };
 		C59B91D12917B887008805FF /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		C5C43E2128FB474E00538AE6 /* CardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
@@ -102,7 +108,7 @@
 		C5E717FC28D65F72005A21DE /* String+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 		C5E717FD28D65F72005A21DE /* UICollectionViewCell + Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UICollectionViewCell + Extensions.swift"; sourceTree = "<group>"; };
 		C5E7181528D66082005A21DE /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
-		C5E7181728D66262005A21DE /* EnterExpensesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterExpensesVC.swift; sourceTree = "<group>"; };
+		C5E7181728D66262005A21DE /* EnterImportsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterImportsVC.swift; sourceTree = "<group>"; };
 		C5E7181D28D663B3005A21DE /* IncomeTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncomeTableCell.swift; sourceTree = "<group>"; };
 		C5E7181E28D663B3005A21DE /* IncomeTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IncomeTableCell.xib; sourceTree = "<group>"; };
 		FD09125A85405BD5F6A7B742 /* Pods_A_S_incomes.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_A_S_incomes.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -135,6 +141,15 @@
 				036C8C6EAC15CA2CD602F338 /* Pods-A.S-incomes.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		C549F39429229B9700354B2D /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				C549F39529229C2000354B2D /* A.S-incomes.xcdatamodeld */,
+				C549F39829229D9100354B2D /* CoreDataManager.swift */,
+			);
+			path = CoreData;
 			sourceTree = "<group>";
 		};
 		C58C86A529057ECE0093A391 /* Localization */ = {
@@ -178,6 +193,7 @@
 				C5E717E128D65E2B005A21DE /* Manager */,
 				C5E717D228D65B1C005A21DE /* App Delegates */,
 				C58C86A529057ECE0093A391 /* Localization */,
+				C549F39429229B9700354B2D /* CoreData */,
 				C5E717E428D65ED1005A21DE /* Helper */,
 				C5C43E2028FB473400538AE6 /* Shared */,
 				C5E717E728D65F36005A21DE /* Extensions */,
@@ -286,10 +302,11 @@
 			children = (
 				C5E7181928D662C3005A21DE /* Views */,
 				C5E7181528D66082005A21DE /* HomeVC.swift */,
-				C5E7181728D66262005A21DE /* EnterExpensesVC.swift */,
+				C5E7181728D66262005A21DE /* EnterImportsVC.swift */,
 				C5DC0A502902C26400427AE8 /* ExportExcelVC.swift */,
-				C5273659290AB9D600EE8BFC /* EnterNewAmountVC.swift */,
+				C5273659290AB9D600EE8BFC /* EnterExpensesVC.swift */,
 				C59B91D12917B887008805FF /* LoginVC.swift */,
+				C549F39A2922B15000354B2D /* ImportsVC.swift */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -426,14 +443,16 @@
 				C5E7181328D65F72005A21DE /* UICollectionViewCell + Extensions.swift in Sources */,
 				C5E7180028D65F72005A21DE /* Sections.swift in Sources */,
 				C5E7180928D65F72005A21DE /* UINavigation + Extensions.swift in Sources */,
-				C5E7181828D66262005A21DE /* EnterExpensesVC.swift in Sources */,
+				C5E7181828D66262005A21DE /* EnterImportsVC.swift in Sources */,
 				C5E7180C28D65F72005A21DE /* GoogleMapsHelper.swift in Sources */,
+				C549F39B2922B15000354B2D /* ImportsVC.swift in Sources */,
 				C5E7180428D65F72005A21DE /* Toast.swift in Sources */,
 				C5E717FF28D65F72005A21DE /* Colors.swift in Sources */,
 				C5E7180828D65F72005A21DE /* UILabel + Extensions.swift in Sources */,
 				C5E7181628D66082005A21DE /* HomeVC.swift in Sources */,
 				C5E7180D28D65F72005A21DE /* ViewController.swift in Sources */,
-				C527365A290AB9D600EE8BFC /* EnterNewAmountVC.swift in Sources */,
+				C527365A290AB9D600EE8BFC /* EnterExpensesVC.swift in Sources */,
+				C549F39729229C2000354B2D /* A.S-incomes.xcdatamodeld in Sources */,
 				C5E7180128D65F72005A21DE /* URL + Extenstions.swift in Sources */,
 				C5E7180728D65F72005A21DE /* Helper.swift in Sources */,
 				C5C43E2228FB474E00538AE6 /* CardView.swift in Sources */,
@@ -443,6 +462,7 @@
 				C5E7181F28D663B3005A21DE /* IncomeTableCell.swift in Sources */,
 				C5E7180A28D65F72005A21DE /* RelaxedStrings.swift in Sources */,
 				C5E717DC28D65C7A005A21DE /* APIError.swift in Sources */,
+				C549F39929229D9100354B2D /* CoreDataManager.swift in Sources */,
 				C5E7180328D65F72005A21DE /* Router.swift in Sources */,
 				C5DC0A512902C26400427AE8 /* ExportExcelVC.swift in Sources */,
 				C5E717BF28D651C8005A21DE /* AppDelegate.swift in Sources */,
@@ -478,7 +498,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				C5E717C528D651C8005A21DE /* Base */,
-				C58C86A429057E740093A391 /* ar */,
+				C54DB06C2926DF7500C75CA7 /* ar */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -697,6 +717,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		C549F39529229C2000354B2D /* A.S-incomes.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				C549F39629229C2000354B2D /* A.S-incomes.xcdatamodel */,
+			);
+			currentVersion = C549F39629229C2000354B2D /* A.S-incomes.xcdatamodel */;
+			path = "A.S-incomes.xcdatamodeld";
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = C5E717B328D651C8005A21DE /* Project object */;
 }

@@ -25,6 +25,7 @@ class LoginVC: UIViewController {
         loader.isHidden = false
         APIRoute.shared.fetchRequest(clientRequest: .login(name: username, password: password), decodingModel: User.self) { [weak self] result in
             guard let strongSelf = self else { return}
+            strongSelf.loader.isHidden = true
             switch result {
             case .success(let data):
                 UserManager.shared.setUser(user: data)

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="19461" systemVersion="20G165" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="DestinationCD" representedClassName="DestinationCD" syncable="YES" codeGenerationType="class">
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <relationship name="expense" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="DestinationCD" inverseName="expense" inverseEntity="DestinationCD"/>
+    </entity>
+    <entity name="ExpenseCD" representedClassName="ExpenseCD" syncable="YES" codeGenerationType="class">
+        <attribute name="amount" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="date" optional="YES" attributeType="String"/>
+        <relationship name="destination" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="DestinationCD"/>
+    </entity>
+    <entity name="ImportCD" representedClassName="ImportCD" syncable="YES" codeGenerationType="class">
+        <attribute name="amount" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="title" optional="YES" attributeType="String"/>
+    </entity>
+    <elements>
+        <element name="DestinationCD" positionX="-63" positionY="-18" width="128" height="59"/>
+        <element name="ExpenseCD" positionX="-36" positionY="9" width="128" height="74"/>
+        <element name="ImportCD" positionX="-54" positionY="-9" width="128" height="59"/>
+    </elements>
+</model>

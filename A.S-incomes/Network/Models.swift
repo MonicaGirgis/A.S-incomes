@@ -22,7 +22,7 @@ struct FlagMessageResponse : Decodable {
 ///
 ///
 struct Amounts: Codable {
-    let Id : String?
+    let id : String?
     let amountNet : String?
     let title : String?
     let date : String?
@@ -31,12 +31,29 @@ struct Amounts: Codable {
 
     enum CodingKeys: String, CodingKey {
 
-        case Id = "c_id"
+        case id = "c_id"
         case amountNet = "c_amount_net"
         case title = "c_title"
         case date = "c_date"
         case add_by = "c_add_by"
         case remain_amount = "remain_amount"
+    }
+}
+
+struct Expense: Codable {
+    let id: String?
+    let expensesAmount: ValueWrapper?
+    let description: String?
+    let date: String?
+    let updatedDate: String?
+    
+    enum CodingKeys: String, CodingKey {
+
+        case id = "cd_id"
+        case expensesAmount = "cd_amount_expenses"
+        case description = "cd_description"
+        case date = "cd_add_date"
+        case updatedDate = "cd_update_date"
     }
 }
 
@@ -59,12 +76,16 @@ struct Bond: Decodable {
     }
 }
 
-struct Destination: Decodable {
+struct DestinationInfo: Codable {
     let name: String?
     let amount: String?
 }
 
 struct User: Codable {
-    let id: String?
+    let id: Int?
     let type: String?
+}
+
+struct Destination: Codable {
+    let name: String?
 }

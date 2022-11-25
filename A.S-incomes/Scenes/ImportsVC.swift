@@ -1,20 +1,20 @@
 //
-//  HomeVC.swift
+//  ImportsVC.swift
 //  A.S-incomes
 //
-//  Created by Monica Girgis Kamel on 17/09/2022.
+//  Created by Monica Girgis Kamel on 14/11/2022.
 //
 
 import UIKit
 
-class HomeVC: UIViewController {
+class ImportsVC: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     
     private var refreshControl  = UIRefreshControl()
     private var isFirstRefresh: Bool = true
     
-    private var expenses: [Expense] = []
+    private var amounts: [Amounts] = []
     private lazy var loader: UIView = {
        return createActivityIndicator()
     }()
@@ -30,7 +30,7 @@ class HomeVC: UIViewController {
         
         fetchData()
     }
-
+    
     private func setupUI() {
         tableView.refreshControl = refreshControl
         refreshControl.tintColor = .white
@@ -59,12 +59,12 @@ class HomeVC: UIViewController {
     
     private func fetchData() {
         loader.isHidden = false
-        APIRoute.shared.fetchRequest(clientRequest: .getExpenses, decodingModel: Response<Expense>.self) { [weak self] result in
+        APIRoute.shared.fetchRequest(clientRequest: .getAllAmounts, decodingModel: Response<Amounts>.self) { [weak self] result in
             guard let strongSelf = self else { return}
             strongSelf.loader.isHidden = true
             switch result {
             case .success(let data):
-                strongSelf.expenses = data.data
+                strongSelf.amounts = data.data
                 strongSelf.tableView.reloadData()
             case .failure(let error):
                 windows?.make(toast: error.localizedDescription)
@@ -73,25 +73,25 @@ class HomeVC: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let vc = segue.destination as? EnterExpensesVC, let expense = sender as? Expense else { return}
-        vc.expense = expense
+        guard let vc = segue.destination as? EnterImportsVC, let amount = sender as? Amounts else { return}
+        vc.amount = amount
     }
 }
 
 // MARK: - UITableViewDataSource, UITableViewDelegate
-extension HomeVC: UITableViewDataSource, UITableViewDelegate  {
+extension ImportsVC: UITableViewDataSource, UITableViewDelegate  {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return expenses.count
+        return amounts.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: IncomeTableCell.identifier, for: indexPath) as! IncomeTableCell
-        cell.setData(expense: expenses[indexPath.row])
+        cell.setData(amount: amounts[indexPath.row])
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         guard let type = UserManager.shared.getUserData().type, type == "admin" else { return}
-        performSegue(withIdentifier: "show" + EnterExpensesVC.identifier , sender: expenses[indexPath.row])
+        performSegue(withIdentifier: "show" + EnterImportsVC.identifier , sender: amounts[indexPath.row])
     }
 }

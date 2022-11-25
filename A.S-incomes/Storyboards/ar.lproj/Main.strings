@@ -1,18 +1,21 @@
 
 /* Class = "UIButton"; configuration.title = "Export"; ObjectID = "2zi-wz-OEE"; */
-"2zi-wz-OEE.configuration.title" = "إصدار ملف الإكسل";
+"2zi-wz-OEE.configuration.title" = "الصادر";
 
 /* Class = "UIButton"; normalTitle = "Button"; ObjectID = "2zi-wz-OEE"; */
 "2zi-wz-OEE.normalTitle" = "Button";
 
 /* Class = "UILabel"; text = "Enter new received amount"; ObjectID = "3Uf-xE-ZVO"; */
-"3Uf-xE-ZVO.text" = "أدخل المبلغ الوارد";
+"3Uf-xE-ZVO.text" = "ادخل وارد جديد";
+
+/* Class = "UITabBarItem"; title = "Imports"; ObjectID = "5g8-GI-W1d"; */
+"5g8-GI-W1d.title" = "الواردات";
 
 /* Class = "UILabel"; text = "Date"; ObjectID = "DLq-Ha-Y8Z"; */
 "DLq-Ha-Y8Z.text" = "التاريخ";
 
 /* Class = "UITabBarItem"; title = "Export Excel"; ObjectID = "HGW-GQ-Rdd"; */
-"HGW-GQ-Rdd.title" = "إصدار ملف الإكسل";
+"HGW-GQ-Rdd.title" = "إنشاء الإكسل";
 
 /* Class = "UILabel"; text = "Amount"; ObjectID = "LjF-Em-XZZ"; */
 "LjF-Em-XZZ.text" = "المبلغ";
@@ -20,14 +23,29 @@
 /* Class = "UILabel"; text = "From"; ObjectID = "RSj-rn-VCM"; */
 "RSj-rn-VCM.text" = "من";
 
+/* Class = "UILabel"; text = "A.S Incomes"; ObjectID = "SHt-Qu-Jvu"; */
+"SHt-Qu-Jvu.text" = "A.S Incomes";
+
+/* Class = "UITextField"; placeholder = "Password"; ObjectID = "a5T-Ng-yDX"; */
+"a5T-Ng-yDX.placeholder" = "كلمة السر";
+
+/* Class = "UILabel"; text = "Date"; ObjectID = "b3o-wt-kLp"; */
+"b3o-wt-kLp.text" = "التاريخ";
+
 /* Class = "UILabel"; text = "Export excel sheet"; ObjectID = "ca9-xW-FkM"; */
-"ca9-xW-FkM.text" = "إصدار ملف الإكسل";
+"ca9-xW-FkM.text" = "إنشاء ملف إكسل";
+
+/* Class = "UILabel"; text = "Amount"; ObjectID = "ceT-Yu-3s4"; */
+"ceT-Yu-3s4.text" = "المبلغ";
+
+/* Class = "UILabel"; text = "Destination"; ObjectID = "lHX-sQ-MAY"; */
+"lHX-sQ-MAY.text" = "الجهة";
 
 /* Class = "UILabel"; text = "Description"; ObjectID = "mdH-ay-QES"; */
-"mdH-ay-QES.text" = "ملاحظات إضافية";
+"mdH-ay-QES.text" = "الوصف";
 
 /* Class = "UITabBarItem"; title = "Insert Expense"; ObjectID = "pVR-Oa-PH9"; */
-"pVR-Oa-PH9.title" = "أدخال مصروف";
+"pVR-Oa-PH9.title" = "إدخال صادر";
 
 /* Class = "UILabel"; text = "To"; ObjectID = "pm9-gM-o61"; */
 "pm9-gM-o61.text" = "إلي";
@@ -35,8 +53,29 @@
 /* Class = "UITabBarItem"; title = "Home"; ObjectID = "r5U-tx-w4j"; */
 "r5U-tx-w4j.title" = "الرئيسية";
 
+/* Class = "UITabBarItem"; title = "Insert Expense"; ObjectID = "rhk-E7-CZ7"; */
+"rhk-E7-CZ7.title" = "إدخال صادر";
+
 /* Class = "UIButton"; configuration.title = "Send"; ObjectID = "rnG-K5-a2z"; */
 "rnG-K5-a2z.configuration.title" = "إرسال";
 
 /* Class = "UIButton"; normalTitle = "Button"; ObjectID = "rnG-K5-a2z"; */
 "rnG-K5-a2z.normalTitle" = "Button";
+
+/* Class = "UIButton"; configuration.title = "Send"; ObjectID = "shZ-J0-Lgq"; */
+"shZ-J0-Lgq.configuration.title" = "إرسال";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "shZ-J0-Lgq"; */
+"shZ-J0-Lgq.normalTitle" = "Button";
+
+/* Class = "UIButton"; configuration.title = "Login"; ObjectID = "tEI-Ri-IYR"; */
+"tEI-Ri-IYR.configuration.title" = "تسجيل الدخول";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "tEI-Ri-IYR"; */
+"tEI-Ri-IYR.normalTitle" = "Button";
+
+/* Class = "UITextField"; placeholder = "Username"; ObjectID = "w4C-NV-sWZ"; */
+"w4C-NV-sWZ.placeholder" = "اسم المستخدم";
+
+/* Class = "UILabel"; text = "Description"; ObjectID = "yBa-c7-ucq"; */
+"yBa-c7-ucq.text" = "الوصف";

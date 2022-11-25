@@ -21,9 +21,16 @@ class IncomeTableCell: UITableViewCell {
     
     func setData(amount: Amounts) {
         titleLabel.text = amount.title ?? ""
-        subTitleLabel.text = "Remaining".localized + ": " + (amount.remain_amount ?? "")
+        subTitleLabel.text = ""
         amountLabel.text = "Total".localized + ": " + (amount.amountNet ?? "")
         dateLabel.text = amount.date ?? ""
+    }
+    
+    func setData(expense: Expense) {
+        titleLabel.text = expense.description ?? ""
+        subTitleLabel.text = ""
+        amountLabel.text = "Paid".localized + ": " + "\(expense.expensesAmount?.doubleValue ?? 0)"
+        dateLabel.text = expense.date ?? ""
     }
 
 }

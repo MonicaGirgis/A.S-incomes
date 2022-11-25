@@ -15,16 +15,16 @@ class UserManager{
     
     // check if user is logged in
     func isUserLoggedIn()-> Bool{
-        return (getUserData().id ?? "") != ""
+        return (getUserData().id ?? 0) != 0
     }
     
     func setUser(user: User) {
-        UserDefaults.standard.set(user.id ?? "", forKey: "userId")
+        UserDefaults.standard.set(user.id ?? -1, forKey: "userId")
         UserDefaults.standard.set(user.type ?? "", forKey: "userType")
     }
     
     func getUserData() -> User {
-        let id = UserDefaults.standard.string(forKey: "userId") ?? ""
+        let id = UserDefaults.standard.integer(forKey: "userId")
         let type = UserDefaults.standard.string(forKey: "userType") ?? ""
         return User(id: id, type: type)
     }

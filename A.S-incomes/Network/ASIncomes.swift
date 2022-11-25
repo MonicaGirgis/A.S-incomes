@@ -10,12 +10,14 @@ import Foundation
 enum ASIncomes{
     case login(name: String, password: String)
     case getAllAmounts
-    case getExpenseDetails(id: Int)
+    case getExpenses
     case insertNewAmount(amount: Double, title: String, date: String, userId: Int? = nil)
-    case insertExpensesDetails(amountId: Int, amount: Double, title: String, date: String, userId: Int? = nil)
+    case insertExpensesDetails(amount: Double, title: String, date: String, userId: Int? = nil)
     case exportExcel(from: String, to: String)
     case exportExcel2(from: String, to: String)
     case getAllClients
+    case updateIncome(id: Int, amount: Double, title: String, date: String, userId: Int? = nil)
+    case updateExpense(id: Int, amount: Double, title: String, date: String, userId: Int? = nil)
 }
 
 extension Bundle {
@@ -41,7 +43,7 @@ extension ASIncomes: Endpoint{
         switch self {
         case .getAllAmounts:
             return "get_all_amount"
-        case .getExpenseDetails:
+        case .getExpenses:
             return "get_expense_details"
         case .insertNewAmount:
             return "insert_new_amount"
@@ -55,12 +57,17 @@ extension ASIncomes: Endpoint{
             return "getallclients"
         case .login:
             return "login"
+        case .updateIncome:
+            return "update_income"
+        case .updateExpense:
+            return "edit_expenses"
         }
     }
     
+    
     var method: HTTPMethod {
         switch self {
-        case .insertNewAmount, .insertExpensesDetails, .login:
+        case .insertNewAmount, .insertExpensesDetails, .login, .updateIncome, .updateExpense:
             return .post
         default:
             return .get
@@ -71,9 +78,6 @@ extension ASIncomes: Endpoint{
     
     var queryItems: [URLQueryItem] {
         switch self {
-        case .getExpenseDetails(let id):
-            return [URLQueryItem(name: "id", value: "\(id)")]
-            
         case .exportExcel(let from, let to), .exportExcel2(let from, let to):
             return [URLQueryItem(name: "date_from", value: from), URLQueryItem(name: "date_to", value: to)]
             
@@ -101,8 +105,8 @@ extension ASIncomes: Endpoint{
             
             return params
             
-        case .insertExpensesDetails(let amountId, let amount, let title, let date, let userId):
-            params["id_amount_net_v"] = amountId
+        case .insertExpensesDetails(let amount, let title, let date, let userId):
+            params["id_amount_net_v"] = 0
             params["amount_expenses_v"] = amount
             params["expenses_details"] = title
             params["add_date"] = date
@@ -114,6 +118,35 @@ extension ASIncomes: Endpoint{
             }
             
             return params
+            
+        case .updateExpense(let id, let amount, let title, let date, let userId):
+            params["amount_expenses_v"] = amount
+            params["expenses_details"] = title
+            params["changed_id"] = id
+            params["add_date"] = date
+            
+            if let userId = userId {
+                params["add_by"] = userId
+            }else {
+                params["add_by"] = 1
+            }
+            
+            return params
+            
+        case .updateIncome(let id, let amount, let title, let date, let userId):
+            params["amount_v"] = amount
+            params["title_v"] = title
+            params["changed_id"] = id
+            params["add_date"] = date
+            
+            if let userId = userId {
+                params["add_by"] = userId
+            }else {
+                params["add_by"] = 1
+            }
+            
+            return params
+            
         default:
             return nil
         }

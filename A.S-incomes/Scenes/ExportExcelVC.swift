@@ -24,7 +24,7 @@ class ExportExcelVC: UIViewController {
     private let dateFormatter = DateFormatter()
     
     private var data: [Bond] = []
-    private var destinations: [Destination] = []
+    private var destinations: [DestinationInfo] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,7 +39,7 @@ class ExportExcelVC: UIViewController {
     
     private func fetchData(from: String, to: String) {
         loader.isHidden = false
-        APIRoute.shared.fetchRequest(clientRequest: .exportExcel2(from: from, to: to), decodingModel: Response<Destination>.self) { [weak self] result in
+        APIRoute.shared.fetchRequest(clientRequest: .exportExcel2(from: from, to: to), decodingModel: Response<DestinationInfo>.self) { [weak self] result in
             guard let strongSelf = self else { return}
             switch result {
             case .success(let data):

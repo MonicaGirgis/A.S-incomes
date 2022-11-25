@@ -16,13 +16,13 @@
         <!--Insert Expense-->
         <scene sceneID="gAt-Ky-0Ql">
             <objects>
-                <viewController storyboardIdentifier="EnterExpensesVC" id="omX-Gf-FeE" customClass="EnterExpensesVC" customModule="A_S_incomes" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="EnterImportsVC" id="omX-Gf-FeE" customClass="EnterImportsVC" customModule="A_S_incomes" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2LD-5Z-gJo">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TiC-cV-hSS" customClass="RoundedCornersView" customModule="A_S_incomes" customModuleProvider="target">
-                                <rect key="frame" x="8" y="113.5" width="398" height="298"/>
+                                <rect key="frame" x="8" y="157.5" width="398" height="298"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="bIp-cn-G63">
                                         <rect key="frame" x="4" y="8" width="390" height="282"/>
@@ -153,7 +153,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter new received amount" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Uf-xE-ZVO" customClass="BaseLabel" customModule="A_S_incomes" customModuleProvider="target">
-                                <rect key="frame" x="90" y="68" width="234" height="21.5"/>
+                                <rect key="frame" x="90" y="112" width="234" height="21.5"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -175,6 +175,7 @@
                     <tabBarItem key="tabBarItem" title="Insert Expense" image="pencil.and.ellipsis.rectangle" catalog="system" id="pVR-Oa-PH9">
                         <color key="badgeColor" red="0.20000000000000001" green="0.58039215690000001" blue="0.82352941180000006" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBarItem>
+                    <navigationItem key="navigationItem" id="Bj0-uD-SJm"/>
                     <connections>
                         <outlet property="amountTextField" destination="Suw-pv-UDk" id="PvJ-8R-PyI"/>
                         <outlet property="datePicker" destination="HaO-0G-ead" id="1IY-3b-pKH"/>
@@ -184,7 +185,50 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XMD-bj-7j1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="297" y="563"/>
+            <point key="canvasLocation" x="1980" y="755"/>
+        </scene>
+        <!--ImportsVC-->
+        <scene sceneID="vaS-HV-AQ2">
+            <objects>
+                <viewController storyboardIdentifier="ImportsVC" id="czk-c7-efa" customClass="ImportsVC" customModule="A_S_incomes" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7o5-6Q-pmc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="RdR-W8-Q7y">
+                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
+                                <color key="backgroundColor" red="0.96078431372549022" green="0.96078431372549022" blue="0.96078431372549022" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="czk-c7-efa" id="vCE-eX-pXy"/>
+                                    <outlet property="delegate" destination="czk-c7-efa" id="bZR-xN-2zn"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="4xy-Xi-LjC"/>
+                        <color key="backgroundColor" red="0.96078431372549022" green="0.96078431372549022" blue="0.96078431372549022" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="RdR-W8-Q7y" firstAttribute="leading" secondItem="4xy-Xi-LjC" secondAttribute="leading" id="52v-KG-eJh"/>
+                            <constraint firstItem="RdR-W8-Q7y" firstAttribute="top" secondItem="4xy-Xi-LjC" secondAttribute="top" id="XQN-d1-AUA"/>
+                            <constraint firstItem="4xy-Xi-LjC" firstAttribute="trailing" secondItem="RdR-W8-Q7y" secondAttribute="trailing" id="Y1X-zk-czk"/>
+                            <constraint firstAttribute="bottom" secondItem="RdR-W8-Q7y" secondAttribute="bottom" id="fVO-IW-kaf"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Epb-3G-Xbe">
+                        <barButtonItem key="leftBarButtonItem" systemItem="add" id="xfa-dW-Tx5">
+                            <color key="tintColor" red="0.20000000000000001" green="0.58039215690000001" blue="0.82352941180000006" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <segue destination="omX-Gf-FeE" kind="show" id="s3F-G1-0Wd"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="RdR-W8-Q7y" id="xkM-Pp-Ulx"/>
+                        <segue destination="omX-Gf-FeE" kind="show" identifier="showEnterImportsVC" id="3T6-F5-WMc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bWi-er-5Eh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1207" y="755"/>
         </scene>
         <!--HomeVC-->
         <scene sceneID="7im-Dg-2jT">
@@ -204,7 +248,7 @@
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Quf-vD-xRS"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.96078431369999995" green="0.96078431369999995" blue="0.96078431369999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="h5m-wZ-l4J" firstAttribute="leading" secondItem="Quf-vD-xRS" secondAttribute="leading" id="JZr-QC-04i"/>
                             <constraint firstAttribute="bottom" secondItem="h5m-wZ-l4J" secondAttribute="bottom" id="Q3M-YL-oST"/>
@@ -212,10 +256,17 @@
                             <constraint firstItem="h5m-wZ-l4J" firstAttribute="top" secondItem="Quf-vD-xRS" secondAttribute="top" id="hYF-tm-gox"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="X42-I5-jKT"/>
+                    <navigationItem key="navigationItem" id="X42-I5-jKT">
+                        <barButtonItem key="leftBarButtonItem" systemItem="add" id="gKJ-d7-mae">
+                            <color key="tintColor" red="0.20000000000000001" green="0.58039215690000001" blue="0.82352941180000006" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <segue destination="4WZ-y5-C82" kind="show" id="BKo-06-jdP"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="h5m-wZ-l4J" id="hE0-Zc-ngB"/>
-                        <segue destination="4WZ-y5-C82" kind="show" identifier="showEnterNewAmountVC" id="r3d-sa-sOX"/>
+                        <segue destination="4WZ-y5-C82" kind="show" identifier="showEnterExpensesVC" id="r3d-sa-sOX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Oc0-Sr-jtX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -376,7 +427,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nWQ-Ue-iYb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-593" y="969"/>
+            <point key="canvasLocation" x="-1509" y="1152"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="e08-f4-PK7">
@@ -392,7 +443,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="phY-pi-to7" kind="relationship" relationship="viewControllers" id="Vos-3e-Sky"/>
-                        <segue destination="omX-Gf-FeE" kind="relationship" relationship="viewControllers" id="jAN-HL-zgD"/>
+                        <segue destination="h8c-9Y-8CF" kind="relationship" relationship="viewControllers" id="eJ0-pb-bYP"/>
                         <segue destination="KcF-NF-tLx" kind="relationship" relationship="viewControllers" id="aHv-Zs-5HM"/>
                     </connections>
                 </tabBarController>
@@ -403,7 +454,7 @@
         <!--Insert Expense-->
         <scene sceneID="9nP-7I-Dve">
             <objects>
-                <viewController storyboardIdentifier="EnterNewAmountVC" id="4WZ-y5-C82" customClass="EnterNewAmountVC" customModule="A_S_incomes" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="EnterExpensesVC" id="4WZ-y5-C82" customClass="EnterExpensesVC" customModule="A_S_incomes" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="yws-1d-XKd">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -777,11 +828,37 @@
             </objects>
             <point key="canvasLocation" x="-1555" y="204"/>
         </scene>
+        <!--Imports-->
+        <scene sceneID="Mmf-cU-gzC">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="h8c-9Y-8CF" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Imports" image="wallet.pass.fill" catalog="system" id="5g8-GI-W1d"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="zjV-V6-UJk">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.96078431372549022" green="0.96078431372549022" blue="0.96078431372549022" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" red="0.96078431372549022" green="0.96078431372549022" blue="0.96078431372549022" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="czk-c7-efa" kind="relationship" relationship="rootViewController" id="Br0-jd-YII"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YWN-Mc-y3c" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="297" y="755"/>
+        </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="r3d-sa-sOX"/>
+        <segue reference="3T6-F5-WMc"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="homekit" catalog="system" width="128" height="106"/>
         <image name="pencil.and.ellipsis.rectangle" catalog="system" width="128" height="81"/>
         <image name="tray.full" catalog="system" width="128" height="88"/>
+        <image name="wallet.pass.fill" catalog="system" width="115" height="128"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
