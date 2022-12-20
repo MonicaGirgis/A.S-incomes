@@ -16,7 +16,6 @@ class EnterImportsVC: UIViewController {
     
     var amount: Amounts?
    
-    
     private lazy var loader: UIView = {
         return createActivityIndicator()
     }()
@@ -62,7 +61,7 @@ class EnterImportsVC: UIViewController {
         guard let amount = amount, let idTxt = amount.id, let amountId = Int(idTxt) else { return }
         loader.isHidden = false
         let id = UserManager.shared.getUserData().id
-        APIRoute.shared.fetchRequest(clientRequest: .updateExpense(id: amountId, amount: price, title: desc, date: date, userId: id), decodingModel: FlagMessageResponse.self) { [weak self] result in
+        APIRoute.shared.fetchRequest(clientRequest: .updateIncome(id: amountId, amount: price, title: desc, date: date, userId: id), decodingModel: FlagMessageResponse.self) { [weak self] result in
             guard let strongSelf = self else { return}
             strongSelf.loader.isHidden = true
             switch result {
